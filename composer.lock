@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f372b598172a77be065dc3cabd4839ea",
+    "content-hash": "eb43faaa59f7a87e77b8949fd14b2ce7",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1792,16 +1792,16 @@
         },
         {
             "name": "laravel/jetstream",
-            "version": "v2.13.1",
+            "version": "v2.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/jetstream.git",
-                "reference": "8e241881c123f96c55fb7cddfb63408958427919"
+                "reference": "a0ab21b7f9505d8fcdea6abf03a280455de5973d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/jetstream/zipball/8e241881c123f96c55fb7cddfb63408958427919",
-                "reference": "8e241881c123f96c55fb7cddfb63408958427919",
+                "url": "https://api.github.com/repos/laravel/jetstream/zipball/a0ab21b7f9505d8fcdea6abf03a280455de5973d",
+                "reference": "a0ab21b7f9505d8fcdea6abf03a280455de5973d",
                 "shasum": ""
             },
             "require": {
@@ -1809,7 +1809,7 @@
                 "illuminate/console": "^9.21",
                 "illuminate/support": "^9.21",
                 "jenssegers/agent": "^2.6",
-                "laravel/fortify": "^1.13.3",
+                "laravel/fortify": "^1.15",
                 "php": "^8.0.2"
             },
             "conflict": {
@@ -1858,7 +1858,7 @@
                 "issues": "https://github.com/laravel/jetstream/issues",
                 "source": "https://github.com/laravel/jetstream"
             },
-            "time": "2022-12-16T16:44:02+00:00"
+            "time": "2023-01-03T15:37:09+00:00"
         },
         {
             "name": "laravel/sanctum",
