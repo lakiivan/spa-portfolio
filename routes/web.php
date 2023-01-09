@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\ContactController;
+use App\Models\Project;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Models\Skill;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,8 +24,13 @@ Route::get('/', function () {
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
+        'skills' => Skill::all(),
+        'projects' => Project::all(),
     ]);
 });
+
+Route::post('contact', [ContactController::class, 'contact'])
+->name('contact');
 
 Route::middleware([
     'auth:sanctum',

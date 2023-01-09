@@ -14,10 +14,10 @@ class Project extends Model
         'title',
         'description',
         'color',
-        'icon_name'
+        'icon_name',
     ];
 
-    public static function getAvailableTextColors() 
+    public static function getAvailableTextColors()
     {
         $elements = json_decode(
             File::get(resource_path('json/customization.json'))
@@ -26,7 +26,7 @@ class Project extends Model
         return $elements->texts;
     }
 
-    public static function getAvailableIcons() 
+    public static function getAvailableIcons()
     {
         $elements = json_decode(
             File::get(resource_path('json/customization.json'))

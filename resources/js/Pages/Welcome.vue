@@ -1,4 +1,3 @@
-
 <template>
     <Head title="Welcome"/>
 
@@ -72,10 +71,7 @@
 
                         @click="contacting = true"
                     >
-                        <!-- {{
-                            $page.props.flash.contacted ? 'Thanks!' : 'Let\'s chat'
-                        }} -->
-                        Let's Chat
+                    
                     </jet-button>
                 </div>
             </div>
@@ -143,7 +139,7 @@
                     <!-- {{
                         $page.props.flash.contacted ? 'Thanks!' : 'Know more'
                     }} -->
-                    Know more
+                    Know more?
                 </jet-button>
             </div>
 
@@ -172,7 +168,8 @@
             </div>
         </Section>
     </div>
-    <jet-modal :show="contacting" closeable="true" @close="contacting=null">
+    
+    <jet-modal :show="contacted" closeable=true @close="contacting=null">
         <div
             class="bg-green-400 shadow-2xl p-8 text-center font-bold"
             v-if="$page.props.flash.contacted"
@@ -228,14 +225,17 @@
 <script>
     import { defineComponent, defineAsyncComponent } from 'vue'
     import { Head, Link } from '@inertiajs/inertia-vue3'
+
     import JetApplicationMark from '@/Components/ApplicationMark.vue'
     import JetButton from '@/Components/Button.vue'
     import JetModal from '@/Components/Modal.vue'
     import JetInput from '@/Components/InputLabel.vue'
     import JetInputError from '@/Components/InputError.vue'
+
     import Section from '@/Components/Section.vue'
     import Skill from '@/Components/Skill.vue'
     import Project from '@/Components/Project.vue'
+
     export default defineComponent({
         components: {
             Head,
@@ -249,12 +249,14 @@
             Skill,
             Project,
         },
+
         props: {
             canLogin: Boolean,
             canRegister: Boolean,
             skills: Object,
             projects: Object,
         },
+
         methods: {
             componentName(index) {
                 return defineAsyncComponent(() =>
